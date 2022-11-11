@@ -1,0 +1,19 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+temperature_database:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/temps.csv
+
+train_data:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/train.csv
+
+test_data:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/test.csv
+
+predictions:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/labeled.csv
